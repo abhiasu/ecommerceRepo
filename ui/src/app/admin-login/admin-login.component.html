@@ -1,0 +1,44 @@
+<main>
+<div class="container">
+    <div class="loginBox">
+  <div class="row">
+    <div class="col-md-5 cardimg"><img src="./assets/images/geometric-cave.jpg" class="img-fluid"></div>
+    <div class="col-md-7">
+      
+        <form class="form-signin" [formGroup]="loginform" (ngSubmit)="onSubmit()">
+            <h2>Login</h2>
+            <mat-form-field class="matInputFiled">
+                <input matInput placeholder="Email" formControlName="email">
+                <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+
+                  <mat-error *ngIf="email.hasError('required')">
+                      Required
+                    </mat-error>
+              </mat-form-field>
+
+          <mat-form-field class="matInputFiled">
+              <input matInput placeholder="Password" type="password" formControlName="password">
+              <mat-error *ngIf="password.hasError('required')">
+                  Required
+                </mat-error>
+            </mat-form-field>
+            
+           
+            <!-- <p>
+              Form Status: {{ loginform.status }}
+            </p> -->
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="!loginform.valid">Sign in <span class="loginloader" *ngIf="loginloader"><img src="/assets/images/small_loader.gif"></span></button>
+            <div class="error_msg">{{loginError}}</div>
+        </form>
+
+            
+
+         
+       
+    </div>
+  </div>
+  </div>
+</div>
+</main>

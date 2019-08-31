@@ -1,0 +1,26 @@
+#adduser{
+    .sec_heading{
+        padding: 5px 0 10px 0;
+
+        h3{
+            font-size: 15px;
+            font-weight:500;
+            color: #2f353a;
+        }
+    }
+    .matInputFiled{
+        width: 100%;
+    }
+    .btn-signin{
+        margin-top: 15px;
+    }
+    .btn-clear{
+        margin-top: 15px;
+        margin-left: 10px; 
+    }
+    .error_msg{
+        color: red;
+        text-align: left;
+        padding: 5px 0 0 0;
+    }
+}

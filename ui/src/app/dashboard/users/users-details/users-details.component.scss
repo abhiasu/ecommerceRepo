@@ -1,0 +1,23 @@
+.table thead th{
+    border: none !important;
+}
+.table_icon{
+    a{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background: #797878;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 5px;
+        color: #ececec;
+        position: relative;
+    }
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+    }
+}

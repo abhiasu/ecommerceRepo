@@ -1,0 +1,85 @@
+.app_header {
+    // position: fixed;
+    // z-index: 1020;
+    width: 100%;
+    height: 55px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 8px 6px -10px #333333;
+       -moz-box-shadow: 0 8px 6px -10px #333333;
+            box-shadow: 0 8px 6px -10px #333333;
+}
+.navbar{
+    width: 100%;
+}
+.main_con{
+   // position: relative;
+}
+.mat_sidemenu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+.sideMenuList{
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+
+      li{
+          font-size: 15px;
+          padding: 5px 0;
+          
+          a{
+            color: #333333;
+
+            i{
+                margin-right: 5px;
+                color: #73818f;
+            }
+          }
+          
+      }
+  }
+  .main_container{
+      padding: 0 15px;
+  }
+  .fa-ellipsis-v{
+      color: #ffffff;
+      font-size: 22px;
+      display: inline-block;
+     margin-right: 15px; 
+  }
+  .userheaderImg{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #73818f;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+    
+    i{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    img{
+       width: 100%;
+       height: auto; 
+    }
+    
+  }
+  .username{
+      display: inline-block;
+      color: #ffffff;
+      padding-right: 10px;
+      padding-top: 9px;
+  }
+  .mat-icon-button{
+      width:60px;
+  }
+  .usermenuIcon{
+      margin-right: 10px;
+  }
+

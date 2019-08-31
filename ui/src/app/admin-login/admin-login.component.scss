@@ -1,0 +1,43 @@
+@import "../../styles.scss";
+main {
+    flex: 1 0 auto;
+}
+.loginBox{
+    //overflow: hidden;
+    margin-top: 10%;
+    -webkit-box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.75);
+    width: 100%;
+    background: #FFFFFF;
+    padding-right: 20px;
+
+    .cardimg img{
+        display: block;
+    }
+    h2{
+        margin-top: 20px;
+    }
+    .matInputFiled{
+        width: 100%;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+    form{
+        padding: 0px 30px;
+    }
+    .error_msg{
+        color: red;
+        text-align: center;
+        padding: 5px 0 0 0;
+    }
+    .btn-signin{
+        position: relative;
+    }
+    .loginloader{
+        position: absolute;
+        top: 5px;
+        right: 30%;
+    }
+}

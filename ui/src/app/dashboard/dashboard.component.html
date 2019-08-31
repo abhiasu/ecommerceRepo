@@ -1,0 +1,119 @@
+<div class="container_fuild">
+  <header class="app_header">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+              <img src="./assets/images/logo.svg" width="89" height="25" alt="CoreUI Logo">
+            </a>
+            
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link 3</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item"><span class="username"> Hello {{getusername}} </span></li>
+                <li class="nav-item"> <span class="userheaderImg" *ngIf="userimg; else elseimg">
+                 
+                      <img src="http://localhost:3000/{{userimg}}">
+                     
+                      
+                    </span>
+                    <ng-template #elseimg><i class="fa fa-user" aria-hidden="true"></i></ng-template>
+                </li>
+                <li class="nav-item">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+      
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                      </button>
+                      <mat-menu #menu="matMenu">    
+                        <button mat-menu-item disabled>
+                            <i class="fa fa-user-circle-o usermenuIcon" aria-hidden="true"></i> 
+                          <span>User Profile</span>
+                        </button>
+                        <button mat-menu-item>
+                            <i class="fa fa-sign-out usermenuIcon" aria-hidden="true"></i> 
+                          <span (click)="logoutuser()">Logout User</span>
+                        </button>
+                      </mat-menu>
+                </li>
+              </ul>
+          </nav>
+        </div>
+    </div>
+  </header>
+  <div class="main_con">
+      <mat-drawer-container class="mat_sidemenu">
+          <mat-drawer mode="side" opened>
+              <mat-accordion>
+                  <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Users
+                        </mat-panel-title>
+                        
+                      </mat-expansion-panel-header>
+                      
+                      <ul class="sideMenuList">
+                          <li><a routerLink="/dashboard/users/add-user"><i class="fa fa-user-plus"></i> Add User</a></li>
+                          <li><a routerLink="/dashboard/users/user-details"><i class="fa fa-check-square"></i> User List</a></li>
+                          <!-- <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i> Delete User</a></li>
+                          <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit User Details</a></li> -->
+                        </ul>
+                      
+                    </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Personal data
+                      </mat-panel-title>
+                      
+                    </mat-expansion-panel-header>
+                    
+                    <ul class="sideMenuList">
+                      <li><a href="#">Add Car</a></li>
+                      <li><a href="#">Show All Cars</a></li>
+                      <li><a href="#">Delete Cars</a></li>
+                      <li><a href="#">Edit Car Details</a></li>
+                    </ul>
+                    
+                    
+                  </mat-expansion-panel>
+                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                       (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Self aware panel
+                      </mat-panel-title>
+                      
+                    </mat-expansion-panel-header>
+                    <p>I'm visible because I am open</p>
+                  </mat-expansion-panel>
+                </mat-accordion>
+          </mat-drawer>
+          <mat-drawer-content>
+              <div class="bd">
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">Other</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                      </ol>
+                    </nav>
+              </div>
+            <div class="main_container">
+                <router-outlet></router-outlet>
+            </div>
+          </mat-drawer-content>
+        </mat-drawer-container>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="row" id="adduser">
+    <div class="col-md-12">
+        <form class="form-signin" [formGroup]= 'loginform' (ngSubmit)="onSubmit()">
+            <div class="sec_heading"><h3>Edit User</h3></div>
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-md-6">
+                          <mat-form-field class="matInputFiled">
+                                  <input matInput placeholder="First Name" type="text" formControlName="firstname">
+                                  <mat-error *ngIf="firstname.hasError('required')">
+                                      Required
+                                    </mat-error>
+                                </mat-form-field>
+  
+                                <mat-form-field class="matInputFiled">
+                                      <input matInput placeholder="Last Name" type="text" formControlName="lastname">
+                                      <mat-error *ngIf="lastname.hasError('required')">
+                                          Required
+                                        </mat-error>
+                                    </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                          <mat-form-field class="matInputFiled">
+                                  <input matInput placeholder="Email" formControlName="email">
+                                  <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                                      Please enter a valid email address
+                                    </mat-error>
+                    
+                                    <mat-error *ngIf="email.hasError('required')">
+                                        Required
+                                      </mat-error>
+                                </mat-form-field>
+                                <mat-form-field class="matInputFiled">
+                                      <input matInput placeholder="Password" type="password" formControlName="password">
+                                      <mat-error *ngIf="password.hasError('required')">
+                                          Required
+                                        </mat-error>
+                                    </mat-form-field>
+                    </div>
+                  
+            
+                    
+                      
+                     
+                      <!-- <p>
+                        Form Status: {{ loginform.status }}
+                      </p> -->
+                      <div class="col-md-12">
+                          <button class="btn btn-primary btn-signin" type="submit" [disabled]="!loginform.valid">Update <span class="loginloader" *ngIf="loginloader"><img src="/assets/images/small_loader.gif"></span></button>
+                          <button class="btn btn-primary btn-clear" type="reset" >Reset </button>
+                          <div class="error_msg">{{loginError}}</div>
+                      </div>
+                      
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+  
